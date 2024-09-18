@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+  
+  <div id="root"></div>
+  
+  <script src="./dist/app.js"></script>
+  
+  <!-- ! (1) index.html 만들기 -->
+  <!-- ! (2) React/ReactDom 만들기 
+  ! head 태그안에 https://unpkg.com/react@18.3.1/umd/react.production.min.js 와 https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js 의 src작성
+  -->
+  <!-- ! (3) babel과 webpack 적용하여 jsx 사용 
+  ! npm을 이용하여 라이브러리 설치:
+  ! 통합터미널: npm install --save-dev @babel/cli @babel/core @babel/preset-react
+  ? -> package.json / package-lock.json / node_modules 2개파일 1개 폴더 생김. node_modules 폴더는 요량이 커서 repository에 올리지 않는것이 원칙.
+  -->
+  <!-- ! (4) .gitignore 파일 생성하여 node_modules 폴더 제외 시킴 
+  ! .gitignore 파일에 node_modules 입력
+  -->
+  <!-- ! (5) babel 설정작업 
+  ! .babelrc 파일 생성
+  ! 파일 안에 
+  ! {
+  !    "presets": ["@babel/preset-react"]
+  ! } 작성
+  -->
+  <!-- ! (6) src폴더 생성 
+  ! 1) 폴더안에 app.jsx 생성 -> 안에 원하는 내용 작성
+  -->
+  <!-- ! (7) packge.json 파일 열기 
+  ! 1) "scripts": {
+  !      "build": "babel src --out-dir dist"
+  !    }, 추가
+
+  ! 2) 통합터미널에서 npm run build 명령어 입력
+  ? -> dist 폴더 생성되면서 안에 app.js 파일 생성됨
+  -->
+  <!-- ! (8) index.html 에서 src로 dist 폴더 안에있는 app.js 파일 연결-->
+
+
+</body>
+</html>
